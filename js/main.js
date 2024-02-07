@@ -199,3 +199,70 @@ if (stages_tab_head_btns.length) {
         })
     })
 }
+
+let header_top__bars = document.querySelector('.header_top__bars');
+let mobile_menu = document.querySelector('.mobile-menu');
+let body = document.querySelector('body');
+header_top__bars.onclick = () => {
+    if (header_top__bars.classList.contains('active')) {
+        header_top__bars.classList.remove('active')
+        header_top__bars.classList.add('end-active')
+        mobile_menu.classList.remove('active')
+        body.style.overflow = 'visible';
+    } else {
+        header_top__bars.classList.remove('end-active')
+        header_top__bars.classList.add('active')
+        mobile_menu.classList.add('active')
+        body.style.overflow = 'hidden';
+    }
+}
+
+$('.main_accordion').each(function (idx, el) {
+    $(el).find('.main_accordion__list').slideUp(0);
+    $(el).find('.main_accordion__btn').click(function () {
+        $(el).find('.main_accordion__list').slideToggle();
+        $(el).find('.main_accordion__btn').toggleClass('main_accordion__btn_active');
+    })
+})
+
+$('.main_child_accordion').each(function (idx, el) {
+    $(el).find('.main_child_accordion__list').slideUp(0);
+    $(el).find('.main_child_accordion__btn').click(function () {
+        $(el).find('.main_child_accordion__list').slideToggle();
+        $(el).find('.main_child_accordion__btn').toggleClass('main_child_accordion__btn_active');
+    })
+})
+
+$('section.search').slideUp(0)
+
+$('.search__open').click(function () {
+    $('section.search').slideToggle();
+
+    if ($('section.search').hasClass('active')) {
+        $('section.search').removeClass('active');
+        $('body').css({
+            overflow: 'visible'
+        })
+    } else {
+        $('section.search').addClass('active');
+        $('body').css({
+            overflow: 'hidden'
+        })
+    }
+})
+
+$('.search__close').click(function () {
+    $('section.search').slideUp();
+    $('section.search').removeClass('active');
+    $('body').css({
+        overflow: 'visible'
+    })
+})
+
+$('.search__head input').on('input', function () {
+    if (this.value) {
+        $('.search__clear')[0].disabled = false;
+    } else {
+        $('.search__clear')[0].disabled = true;
+    }
+})
