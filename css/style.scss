@@ -1654,14 +1654,37 @@ body {
     .article_title {
         border-bottom: 1px solid rgb(228, 228, 229);
 
+        @include media(993) {
+            border-bottom: none;
+        }
+
         .main_title {
             font-size: 48px;
             padding-top: 20px;
+
+            @include media(993) {
+                padding: 20px 0;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 140%;
+                margin-bottom: 0;
+                border-bottom: 2px solid rgb(228, 228, 229);
+            }
+        }
+
+        .breadcrumb {
+            @include media(993) {
+                margin: 12px 0 0 0 !important;
+            }
         }
     }
 
     .article_cars {
         padding: 40px 0;
+
+        @include media(993) {
+            padding: 20px 0;
+        }
 
         span {
             color: rgb(171, 0, 11);
@@ -1679,6 +1702,12 @@ body {
             line-height: 160%;
             letter-spacing: 0%;
             margin-bottom: 20px;
+
+            @include media(993) {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 160%;
+            }
         }
 
         h4 {
@@ -1688,6 +1717,12 @@ body {
             line-height: 160%;
             letter-spacing: 0%;
             margin-bottom: 24px;
+
+            @include media(993) {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 160%;
+            }
         }
 
         p {
@@ -1700,6 +1735,10 @@ body {
 
             a {
                 color: rgb(171, 0, 11);
+
+                @include media(993) {
+                    border-bottom: 1px solid rgb(171, 0, 11);
+                }
             }
         }
 
