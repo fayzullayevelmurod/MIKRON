@@ -139,6 +139,19 @@ body {
     }
 }
 
+.breadcrumb {
+    margin: 20px 0 !important;
+    a {
+        display: flex;
+        gap: 20px;
+        color: rgb(30, 30, 30);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 0%;
+    }
+}
+
 .main_checkbox {
     input[type="checkbox"] {
         display: none;
@@ -1635,6 +1648,68 @@ body {
     }
 }
 // News end
+
+// article
+.article {
+    .article_title {
+        border-bottom: 1px solid rgb(228, 228, 229);
+
+        .main_title {
+            font-size: 48px;
+            padding-top: 20px;
+        }
+    }
+
+    .article_cars {
+        padding: 40px 0;
+
+        span {
+            color: rgb(171, 0, 11);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 160%;
+            letter-spacing: 0%;
+            margin-bottom: 20px;
+        }
+
+        .main_title {
+            color: rgb(0, 0, 0);
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 160%;
+            letter-spacing: 0%;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            color: rgb(30, 30, 30);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 160%;
+            letter-spacing: 0%;
+            margin-bottom: 24px;
+        }
+
+        p {
+            color: rgb(30, 30, 30);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 160%;
+            letter-spacing: 0%;
+            margin-bottom: 20px;
+
+            a {
+                color: rgb(171, 0, 11);
+            }
+        }
+
+        img {
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+    }
+}
+// article
 
 // Footer
 .footer {
