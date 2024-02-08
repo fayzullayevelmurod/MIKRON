@@ -51,11 +51,24 @@ let home_slider = new Swiper('.home_slider', {
 let products_tab_head = new Swiper('.products .main_tab_head .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 20,
+    pagination: {
+        el: ".main_tab__pagination",
+        type: "progressbar",
+    },
 })
 
 let advantage_card = new Swiper('.advantages__card', {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 20,
+    pagination: {
+        el: ".advantages__card_paginations",
+        clickable: true,
+    },
+    breakpoints: {
+        1000: {
+            slidesPerView: 3,
+        }
+    }
 })
 
 let about_company_statistic_slider = new Swiper('.about-company__statistic__card', {
@@ -245,9 +258,12 @@ $('.search__open').click(function () {
         })
     } else {
         $('section.search').addClass('active');
-        $('body').css({
-            overflow: 'hidden'
-        })
+        if (window.innerWidth < 1000) {
+            $('body').css({
+                overflow: 'hidden'
+            })
+        }
+        $('.search__head input').focus();
     }
 })
 
@@ -265,4 +281,8 @@ $('.search__head input').on('input', function () {
     } else {
         $('.search__clear')[0].disabled = true;
     }
+})
+
+$('.search__clear').click(function () {
+    $('.search__head input').val('');
 })
