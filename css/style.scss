@@ -3767,6 +3767,7 @@ body {
 .press_center {
     position: relative;
     z-index: 2;
+    margin-top: 80px;
 
     &__bg {
         position: absolute;
@@ -3926,6 +3927,29 @@ body {
     }
 }
 
+.project_client {
+
+    .project_client_title {
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 20px;
+            white-space: nowrap;
+            width: calc(100% + 40px);
+            transform: translateX(-20px);
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            overflow-x: scroll;
+    
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+    }
+}
+
 .project_client_in {
     margin-bottom: 20px;
     .main_container {
@@ -4016,6 +4040,7 @@ body {
                 }
 
                 .installation_card_text_one {
+                    position: absolute;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -4077,6 +4102,7 @@ body {
                     display: none;
                 }
             }
+
             .object_card_media {
                 display: none;
 
@@ -4149,6 +4175,10 @@ body {
                     line-height: 160%;
                     color: #000;
 
+                    @include media(1250) {
+                        font-size: 26px;
+                    }
+
                     @include media(993) {
                         font-size: 24px;
                     }
@@ -4164,6 +4194,17 @@ body {
                     @include media(993) {
                         font-size: 18px;
                     }
+                }
+            }
+
+            .card_logo {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 175px;
+
+                @include media(1150) {
+                    width: 120px;
                 }
             }
         }
@@ -4204,6 +4245,7 @@ body {
         gap: 20px;
 
         a {
+            white-space: nowrap;
             color: rgb(30, 30, 30);
             font-size: 20px;
             font-weight: 400;
@@ -4234,6 +4276,10 @@ body {
             line-height: 160%;
             letter-spacing: 0%;
             text-align: left;
+
+            @include media(993) {
+                font-size: 32px;
+            }
         }
 
         a.active {

@@ -3374,6 +3374,7 @@ body {
 .press_center {
   position: relative;
   z-index: 2;
+  margin-top: 80px;
 }
 .press_center__bg {
   position: absolute;
@@ -3527,6 +3528,22 @@ body {
   color: #AB000B;
 }
 
+.project_client .project_client_title .breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  white-space: nowrap;
+  width: calc(100% + 40px);
+  transform: translateX(-20px);
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  overflow-x: scroll;
+}
+.project_client .project_client_title .breadcrumb::-webkit-scrollbar {
+  display: none;
+}
+
 .project_client_in {
   margin-bottom: 20px;
 }
@@ -3611,6 +3628,7 @@ body {
   color: #fff;
 }
 .project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3732,6 +3750,11 @@ body {
   line-height: 160%;
   color: #000;
 }
+@media screen and (max-width: 1250px) {
+  .project_client_in .main_container .project_client_card .installation_card_text h4 {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 993px) {
   .project_client_in .main_container .project_client_card .installation_card_text h4 {
     font-size: 24px;
@@ -3747,6 +3770,17 @@ body {
 @media screen and (max-width: 993px) {
   .project_client_in .main_container .project_client_card .installation_card_text h5 {
     font-size: 18px;
+  }
+}
+.project_client_in .main_container .project_client_card .card_logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 175px;
+}
+@media screen and (max-width: 1150px) {
+  .project_client_in .main_container .project_client_card .card_logo {
+    width: 120px;
   }
 }
 .project_client_in .main_container .object_slider .object_slider-pagination {
@@ -3777,6 +3811,7 @@ body {
   gap: 20px;
 }
 .press_wrapper .project_title_under a {
+  white-space: nowrap;
   color: rgb(30, 30, 30);
   font-size: 20px;
   font-weight: 400;
@@ -3804,6 +3839,11 @@ body {
   line-height: 160%;
   letter-spacing: 0%;
   text-align: left;
+}
+@media screen and (max-width: 993px) {
+  .press_wrapper .press_tabs a {
+    font-size: 32px;
+  }
 }
 .press_wrapper .press_tabs a.active {
   color: #AB000B;
