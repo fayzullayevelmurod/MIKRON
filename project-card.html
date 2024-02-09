@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKRON</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link Bootstrap's CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <!-- Style CSS file -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header class="header top-0 start-0 w-100">
+            <div class="header_top bg-white">
+                <div class="main_container d-flex align-items-center justify-content-between">
+                    <a href="/" class="header_logo">
+                        <img src="./images/logo/header_logo.svg" alt="">
+                    </a>
+                    <ul class="d-flex align-items-center">
+                        <li>
+                            <a href="#">3D тур</a>
+                        </li>
+                        <li class="line"></li>
+                        <li>
+                            <a href="#">Каталоги</a>
+                        </li>
+                        <li class="line"></li>
+                        <li>
+                            <a href="#">+7 (800) 505 25 20</a>
+                        </li>
+                    </ul>
+                    <div class="header_top__right_block">
+                        <button class="search__open">
+                            <img src="images/icons/search_dark.svg" alt="">
+                        </button>
+                        <div class="line"></div>
+                        <button class="header_top__bars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <div class="main_container d-flex align-items-center justify-content-between">
+                    <ul class="header_bottom__left_navs d-flex align-items-center">
+                        <li>
+                            <button class="search__open">
+                                <img src="./images/icons/search.svg" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <a href="#">О компании</a>
+                        </li>
+                        <li>
+                            <a href="#">Продукция</a>
+                        </li>
+                        <li>
+                            <a href="#">Проекты</a>
+                        </li>
+                        <li>
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#">Дилеры</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="header_bottom__right_navs d-flex align-items-center">
+                        <li>
+                            <a href="#">Обратная связь</a>
+                        </li>
+                        <li>
+                            <a href="#">Eng</a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">Рус</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu__content">
+                <div class="mobile-menu__head">
+                    <a href="#" class="active">Рус</a>
+                    <a href="#">Eng</a>
+                    <a href="#">3D тур</a>
+                    <a href="#">Каталоги</a>
+                </div>
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__list_item">
+                        <a href="#" class="active">Главная</a>
+                    </li>
+                    <li class="main_accordion mobile-menu__list_item">
+                        <button class="main_accordion__btn">
+                            <span>О компании</span>
+                            <svg width="19.004150" height="9.001953" viewBox="0 0 19.0042 9.00195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs/>
+                                <path id="Icon_arrow" d="M0.502075 0.501953L9.50208 8.33887L18.5021 0.501953" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="main_accordion__list">
+                            <li>
+                                <a href="#">link 1</a>
+                            </li>
+                            <li>
+                                <a href="#">link 2</a>
+                            </li>
+                            <li>
+                                <a href="#">link 3</a>
+                            </li>
+                            <li>
+                                <a href="#">link 4</a>
+                            </li>
+                            <li>
+                                <a href="#">link 5</a>
+                            </li>
+                            <li>
+                                <a href="#">link 6</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main_accordion mobile-menu__list_item">
+                        <button class="main_accordion__btn">
+                            <span>Продукция</span>
+                            <svg width="19.004150" height="9.001953" viewBox="0 0 19.0042 9.00195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs/>
+                                <path id="Icon_arrow" d="M0.502075 0.501953L9.50208 8.33887L18.5021 0.501953" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="main_accordion__list">
+                            <li class="main_child_accordion">
+                                <button class="main_child_accordion__btn">
+                                    <span>Складские стеллажи</span>
+                                    <svg width="19.004028" height="9.001953" viewBox="0 0 19.004 9.00195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs/>
+                                        <path id="Icon_arrow" d="M0.502014 0.501953L9.50201 8.33887L18.502 0.501953" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                                <ul class="main_child_accordion__list">
+                                    <li>
+                                        <a href="#">Фронтальный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Полочный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Глубинный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Мезонинный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Автоматизированные системы хранения</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Среднегрузовые стеллажи R30</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аксессуары для складских стеллажей</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main_child_accordion">
+                                <button class="main_child_accordion__btn">
+                                    <span>Торговое оборудование</span>
+                                    <svg width="19.004028" height="9.001953" viewBox="0 0 19.004 9.00195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs/>
+                                        <path id="Icon_arrow" d="M0.502014 0.501953L9.50201 8.33887L18.502 0.501953" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                                <ul class="main_child_accordion__list">
+                                    <li>
+                                        <a href="#">Фронтальный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Полочный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Глубинный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Мезонинный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Автоматизированные системы хранения</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Среднегрузовые стеллажи R30</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аксессуары для складских стеллажей</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main_child_accordion">
+                                <button class="main_child_accordion__btn">
+                                    <span>Автоматизация</span>
+                                    <svg width="19.004028" height="9.001953" viewBox="0 0 19.004 9.00195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs/>
+                                        <path id="Icon_arrow" d="M0.502014 0.501953L9.50201 8.33887L18.502 0.501953" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                                <ul class="main_child_accordion__list">
+                                    <li>
+                                        <a href="#">Фронтальный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Полочный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Глубинный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Мезонинный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Автоматизированные системы хранения</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Среднегрузовые стеллажи R30</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аксессуары для складских стеллажей</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main_child_accordion">
+                                <button class="main_child_accordion__btn">
+                                    <span>Новые направления</span>
+                                    <svg width="19.004028" height="9.001953" viewBox="0 0 19.004 9.00195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs/>
+                                        <path id="Icon_arrow" d="M0.502014 0.501953L9.50201 8.33887L18.502 0.501953" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                                <ul class="main_child_accordion__list">
+                                    <li>
+                                        <a href="#">Фронтальный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Полочный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Глубинный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Мезонинный стеллаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Автоматизированные системы хранения</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Среднегрузовые стеллажи R30</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аксессуары для складских стеллажей</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main_accordion mobile-menu__list_item">
+                        <button class="main_accordion__btn">
+                            <span>Проекты</span>
+                            <svg width="19.004150" height="9.001953" viewBox="0 0 19.0042 9.00195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs/>
+                                <path id="Icon_arrow" d="M0.502075 0.501953L9.50208 8.33887L18.5021 0.501953" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="main_accordion__list">
+                            <li>
+                                <a href="#">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 4</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 5</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 6</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main_accordion mobile-menu__list_item">
+                        <button class="main_accordion__btn">
+                            <span>Услуги</span>
+                            <svg width="19.004150" height="9.001953" viewBox="0 0 19.0042 9.00195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs/>
+                                <path id="Icon_arrow" d="M0.502075 0.501953L9.50208 8.33887L18.5021 0.501953" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="main_accordion__list">
+                            <li>
+                                <a href="#">Все</a>
+                            </li>
+                            <li>
+                                <a href="#">Проектирование и изготовление</a>
+                            </li>
+                            <li>
+                                <a href="#">Монтаж оборудование</a>
+                            </li>
+                            <li>
+                                <a href="#">Логистика</a>
+                            </li>
+                            <li>
+                                <a href="#">Сервисное обслуживание</a>
+                            </li>
+                            <li>
+                                <a href="#">Техническое освидетельствование по ГОСТ</a>
+                            </li>
+                            <li>
+                                <a href="#">Металлобработка</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu__list_item">
+                        <a href="#">Дилеры</a>
+                    </li>
+                    <li class="mobile-menu__list_item">
+                        <a href="#">Контакты</a>
+                    </li>
+                    <li class="mobile-menu__list_item">
+                        <a href="#">Обратная связь</a>
+                    </li>
+                </ul>
+                <div class="mobile-menu__foot">
+                    <a href="#" class="mobile-menu__foot_tel">+7 (800) 505 25 20</a>
+                    <span class="mobile-menu__foot_amount">по России бесплатно</span>
+                    <a href="#" class="mobile-menu__foot_mail">micron@ozm.ru</a>
+                    <a href="#" class="mobile-menu__foot_address">182115, Псковская область, г. Великие Луки, <br> ул. Гоголя, д. 5</a>
+                    <div class="mobile-menu__foot_socials">
+                        <a href="#">
+                            <img src="./images/icons/telegram_black.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./images/icons/youtube_black.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./images/icons/vkontact_dark.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="mobile-menu__foot_copy">
+                        © Опытный завод “Микрон”, 1998 - 2023. Производство торговых и складских стеллажей.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="search">
+            <div class="main_container">
+                <div class="search__title">
+                    <span>Поиск по сайту</span>
+                    <button class="search__close">
+                        <svg width="24.707031" height="24.707031" viewBox="0 0 24.707 24.707" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs/>
+                            <path id="Vector" d="M24.3535 24.3535L0.353516 0.353516M0.353516 24.3535L24.3535 0.353516" stroke="#1E1E1E" stroke-opacity="1.000000" stroke-width="1.000000"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="search__subtitle">Введите ключевое слово или название стеллажа.</div>
+
+                <div class="search__head">
+                    <input type="text" placeholder="Поиска по сайту">
+                    <button class="search__clear" disabled>
+                        <img src="./images/icons/close.svg" alt="">
+                    </button>
+                    <button class="search__btn">
+                        <img src="./images/icons/search_dark.svg" alt="">
+                    </button>
+                </div>
+                
+                <ul class="search__result">
+                    <li>
+                        <a href="#">
+                            <span class="img">
+                                <img src="./images/search_result_card_1.png" alt="">
+                            </span>
+                            <span class="text">Стеллаж островной без задних стенок</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="img">
+                                <img src="./images/search_result_card_1.png" alt="">
+                            </span>
+                            <span class="text">Стеллаж островной без задних стенок</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="img">
+                                <img src="./images/search_result_card_1.png" alt="">
+                            </span>
+                            <span class="text">Стеллаж островной без задних стенок</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn_red">Показать все результаты</a>
+            </div>
+        </section>
+        <!-- header -->
+
+        <!-- project_client -->
+        <section class="project_client">
+            <div class="project_client_title">
+                <div class="main_container">
+                    <h2 class="main_title">
+                        Объекты
+                    </h2>
+                    <ul class="breadcrumb d-flex align-items-center">
+                        <li>
+                            <a href="#" class="d-flex align-items-center gap-4">
+                                <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.49952 17.5L0.679688 9L8.49952 0.5" stroke="#1E1E1E" stroke-linecap="round"/>
+                                </svg>
+                                Проекты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- project_client -->
+
+        <section class="object-card">
+            <div class="main_container">
+                <h2 class="main_title">Самонесущий склад для торговой сети «Петрович»</h2>
+                <p class="main_title__small">Опытный завод «Микрон» и строительная компания ООО «АЛЬЯНС» предлагают вниманию пример реализации проекта самонесущего склада для торговой сети «Петрович».</p>
+                <h2 class="main_title object-card__title">Самонесущий склад</h2>
+                <p class="main_title__small">Самонесущий склад – это сборно-разборная конструкция на основе стеллажной системы, элементы которой выполняют роль несущих перекрытий. Благодаря этому, такие склады легко возводить, перестраивать и масштабировать.</p>
+            </div>
+        </section>
+
+        <!-- About Object -->
+        <section class="about-object">
+            <div class="main_container">
+                <h2 class="main_title">Об объекте</h2>
+                <div class="about-object__datas">
+                    <div class="left_block">
+                        <div class="key">Площадь объекта:</div>
+                        <div class="value">900.000 м2</div>
+                        <div class="key">Вместимость стеллажей:</div>
+                        <div class="value">999.999 паллетомест</div>
+                    </div>
+                    <div class="right_block">
+                        <div class="key">Тип оборудования:</div>
+                        <div class="value">фронтальный стеллаж</div>
+                        <div class="key">Характеристики оборудования:</div>
+                        <div class="value">самонесущийся склад</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Object end -->
+
+        <!-- About photo -->
+        <section class="about-photo">
+            <img src="./images/about_photo_bg.png" alt="" class="about-photo__bg">
+            <div class="main_container">
+                <h2 class="main_title">Изображения</h2>
+
+                <div class="img_wrapper">
+                    <img src="./images/object-photo_card.png" alt="">
+                    <div class="description">Логистический центр «Оренбург Север». Источник Х5</div>
+                </div>
+            </div>
+        </section>
+        <!-- About photo end-->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="main_container">
+                <a href="/" class="footer__logo">
+                    <img src="/images/logo/footer_logo.svg" alt="">
+                </a>
+                <div class="footer__content">
+                    <div class="footer__content_item">
+                        <h3 class="footer__content_title">О компании</h3>
+                        <ul class="footer__content__link_list">
+                            <li>
+                                <a href="#">Опытный завод “Микрон”</a>
+                            </li>
+                            <li>
+                                <a href="#">Наш подход</a>
+                            </li>
+                            <li>
+                                <a href="#">Карьера</a>
+                            </li>
+                            <li>
+                                <a href="#">Пресс-центр</a>
+                            </li>
+                            <li>
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li>
+                                <a href="#">Документация</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__content_item">
+                        <h3 class="footer__content_title">Продукция</h3>
+                        <ul class="footer__content__link_list">
+                            <li>
+                                <a href="#">Складские стеллажи</a>
+                            </li>
+                            <li>
+                                <a href="#">Торговое оборудование</a>
+                            </li>
+                            <li>
+                                <a href="#">Автоматизация</a>
+                            </li>
+                            <li>
+                                <a href="#">Новые направления</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__content_item">
+                        <h3 class="footer__content_title">Услуги</h3>
+                        <ul class="footer__content__link_list">
+                            <li>
+                                <a href="#">Проектирование и изготовление</a>
+                            </li>
+                            <li>
+                                <a href="#">Монтаж оборудования</a>
+                            </li>
+                            <li>
+                                <a href="#">Логистика</a>
+                            </li>
+                            <li>
+                                <a href="#">Сервисное обслуживание</a>
+                            </li>
+                            <li>
+                                <a href="#">Техническое освидетельствование по ГОСТ</a>
+                            </li>
+                            <li>
+                                <a href="#">Металлообработка</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__content_item">
+                        <a href="#" class="footer__content_tel">+7 (800) 505 25 20</a>
+                        <a href="#" class="footer__content_amount">по России бесплатно</a>
+                        <a href="#" class="footer__content_mail">micron@ozm.ru</a>
+                        <a href="#" class="footer__content_address">182115, Псковская область, <br> г. Великие Луки, ул. Гоголя, д. 5</a>
+                        <div class="footer__content_networks">
+                            <a href="#">
+                                <img src="./images/icons/telegram.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./images/icons/youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./images/icons/vkontact.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__bottom_links">
+                        <a href="#">Политика конфиденциональности</a>
+                        <a href="#">Обработка персональных данных</a>
+                    </div>
+                    <p>© Опытный завод “Микрон”, 1998 - 2023. Производство торговых и складских стеллажей.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer -->
+    </div>
+
+    <!-- Jquery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Js file -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
