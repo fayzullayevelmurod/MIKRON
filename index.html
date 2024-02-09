@@ -418,6 +418,67 @@
                 <a href="#" class="btn_red">Показать все результаты</a>
             </div>
         </section>
+
+        <section class="feedback-modal">
+            <div class="feedback-modal__content">
+                <button class="feedback-modal__close">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 25L1 1M1 25L25 1" stroke="#1E1E1E"/>
+                    </svg>
+                </button>
+                <h2 class="main_title feedback-modal__title">Обратная связь</h2>
+                <div class="main_tab">
+                    <div class="main_tab_head">
+                        <button class="active">Заказать звонок</button>
+                        <button>Оставить заявку</button>
+                    </div>
+                    <div class="main_tab_body">
+                        <div class="main_tab_item active">
+                            <form class="feedback-modal__content_form">
+                                <div class="inputs">
+                                    <input type="text" placeholder="Имя*" class="input_light">
+                                    <input type="tel" placeholder="Телефон*" class="input_light">
+                                </div>
+                                <textarea placeholder="Сообщение" class="input_light"></textarea>
+                                <label>* обязательные поля для ввода.</label>
+                                <div class="main_checkbox">
+                                    <input type="checkbox">
+                                    <span>
+                                        Заполняя данную форму, Вы подтверждаете согласие с условиями <a href="#">политики конфиденциальности и пользовательского соглашения.</a>
+                                    </span>
+                                </div>
+                                <button type="submit" class="btn_red btn_red__disabled" disabled>Отправить</button>
+                            </form>
+                        </div>
+                        <div class="main_tab_item">
+                            <form class="feedback-modal__content_form">
+                                <div class="inputs">
+                                    <input type="text" placeholder="Имя*" class="input_light">
+                                    <input type="tel" placeholder="Телефон*" class="input_light">
+                                    <input type="email" placeholder="Почта*" class="input_light">
+                                </div>
+                                <textarea placeholder="Сопроводительное письмо" class="input_light"></textarea>
+                                <div class="input_file">
+                                    <input type="file" name="" id="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.2038 10.23L8.61375 24L7.56375 22.935L21.1537 9.165C22.8937 7.41 22.8937 4.56 21.1537 2.805C19.4287 1.05 16.6088 1.05 14.8838 2.805L2.32875 15.525C1.17375 16.695 1.17375 18.585 2.32875 19.77C3.48375 20.94 5.35875 20.94 6.51375 19.77L19.0688 7.065C19.6538 6.48 19.6538 5.535 19.0688 4.95C18.4988 4.365 17.5538 4.365 16.9837 4.95L5.46375 16.59L4.41375 15.525L15.9188 3.87C17.0737 2.7 18.9487 2.7 20.1038 3.87C21.2588 5.04 21.2588 6.93 20.1038 8.1L7.56375 20.82C5.82375 22.575 3.01875 22.575 1.29375 20.82C-0.43125 19.065 -0.43125 16.215 1.29375 14.46L13.8488 1.755C16.1588 -0.584999 19.9088 -0.584999 22.2188 1.755C24.5138 4.095 24.5138 7.89 22.2038 10.23Z" fill="#AB000B"/>
+                                    </svg>
+                                    <span class="input_file__name">Загрузить файлы</span>
+                                </div>
+                                <label>* обязательные поля для ввода.</label>
+                                <div class="main_checkbox">
+                                    <input type="checkbox">
+                                    <span>
+                                        Заполняя данную форму, Вы подтверждаете согласие с условиями <a href="#">политики конфиденциальности и пользовательского соглашения.</a>
+                                    </span>
+                                </div>
+                                <button type="submit" class="btn_red btn_red__disabled" disabled>Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- header -->
 
         <!-- Home -->
@@ -502,7 +563,21 @@
         <!-- Products -->
         <div class="products">
             <div class="main_container">
-                <h2 class="main_title products_title">Продукция</h2>
+                <h2 class="main_title products_title">
+                    <span>Продукция</span>
+                    <span class="products_title__btn">
+                        <button class="products_title__btn_prev">
+                            <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.49952 18L0.679688 9.5L8.49952 1" stroke="#1E1E1E" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <button class="products_title__btn_next">
+                            <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.500469 18L8.32031 9.5L0.500471 1.00001" stroke="#AB000B" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </span>
+                </h2>
                 <div class="main_tab">
                     <div class="main_tab_head">
                         <div class="swiper">
@@ -1152,6 +1227,33 @@
                         </div>
                     </div>
                 </div>
+                <div class="certifcation__card_paginations"></div>
+            </div>
+        </section>
+
+        <section class="show_certificates">
+            <button class="show_certificates__close">
+                <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.47949" y="23.6064" width="32" height="2" transform="rotate(-45 4.47949 23.6064)" fill="#1E1E1E"/>
+                    <rect x="5.89355" y="0.979492" width="32" height="2" transform="rotate(45 5.89355 0.979492)" fill="#1E1E1E"/>
+                </svg>
+            </button>
+            <button class="show_certificates__card__prev_btn">
+                <svg width="18" height="36" viewBox="0 0 18 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.9996 35L1.3584 18L16.9996 1" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round"/>
+                </svg>                    
+            </button>
+            <button class="show_certificates__card__next_btn">
+                <svg width="19" height="36" viewBox="0 0 19 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.62249 35L17.2637 18L1.62249 1.00001" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="swiper show_certificates__card">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide show_certificates__card_item">
+                        <img src="./images/certification__card_item.png" alt="">
+                    </div> -->
+                </div>
             </div>
         </section>
         <!-- Certification end -->
@@ -1683,45 +1785,71 @@
         <!-- Clients -->
         <section class="clients">
             <div class="main_container">
-                <h2 class="main_tilte clients__title">Наши клиенты</h2>
+                <h2 class="main_title clients__title">Наши клиенты</h2>
                 <h3 class="main_title__small clients__subtitle">В число клиентов ОЗ "Микрон" входят зарекомендовавшие себя на рынке компании.</h3>
-                <div class="clients__card">
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
-                    <a href="#" class="clients__card_item">
-                        <img src="./images/clients_card.svg" alt="">
-                    </a>
+                <div class="swiper clients__card">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="clients__card_item">
+                                <img src="./images/clients_card.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1754,15 +1882,19 @@
                         
                         <div class="swiper-slide">
                             <div class="main_container">
-                                <div class="industry__content_item">
-                                    <div>
+                                <div class="industry__content_item active">
+                                    <div class="industry__content_item__head">
+                                        <button class="active">Фото</button>
+                                        <button>Описание</button>
+                                    </div>
+                                    <div class="industry__content_item__datas">
                                         <div class="main_title__small industry__content_item__title">Решение</div>
                                         <div class="main_description industry__content_item__description">
                                             <p>Заданная динамика рынка стеллажного оборудования требует разработок совершенно новых конструктивных решений для эффективной организации пространства, причем неважно супермаркета или распределительного центра. </p>
                                             <p>Любая идея или пожелания клиента переводятся на язык конструктива и реализуются в новых разработках инженеров-конструкторов «Микрон». Проектирование включает в себя следующие стадии: концептуальное моделирование, техническое проектирование и согласование с клиентом.</p>
                                         </div>
                                     </div>
-                                    <div class="industry__content_item__card">
+                                    <div class="industry__content_item__card active">
                                         <div class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
@@ -1792,14 +1924,18 @@
                         <div class="swiper-slide">
                             <div class="main_container">
                                 <div class="industry__content_item">
-                                    <div>
+                                    <div class="industry__content_item__head">
+                                        <button class="active">Фото</button>
+                                        <button>Описание</button>
+                                    </div>
+                                    <div class="industry__content_item__datas">
                                         <div class="main_title__small industry__content_item__title">Решение</div>
                                         <div class="main_description industry__content_item__description">
                                             <p>Заданная динамика рынка стеллажного оборудования требует разработок совершенно новых конструктивных решений для эффективной организации пространства, причем неважно супермаркета или распределительного центра. </p>
                                             <p>Любая идея или пожелания клиента переводятся на язык конструктива и реализуются в новых разработках инженеров-конструкторов «Микрон». Проектирование включает в себя следующие стадии: концептуальное моделирование, техническое проектирование и согласование с клиентом.</p>
                                         </div>
                                     </div>
-                                    <div class="industry__content_item__card">
+                                    <div class="industry__content_item__card active">
                                         <div class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
@@ -1829,14 +1965,18 @@
                         <div class="swiper-slide">
                             <div class="main_container">
                                 <div class="industry__content_item">
-                                    <div>
+                                    <div class="industry__content_item__head">
+                                        <button class="active">Фото</button>
+                                        <button>Описание</button>
+                                    </div>
+                                    <div class="industry__content_item__datas">
                                         <div class="main_title__small industry__content_item__title">Решение</div>
                                         <div class="main_description industry__content_item__description">
                                             <p>Заданная динамика рынка стеллажного оборудования требует разработок совершенно новых конструктивных решений для эффективной организации пространства, причем неважно супермаркета или распределительного центра. </p>
                                             <p>Любая идея или пожелания клиента переводятся на язык конструктива и реализуются в новых разработках инженеров-конструкторов «Микрон». Проектирование включает в себя следующие стадии: концептуальное моделирование, техническое проектирование и согласование с клиентом.</p>
                                         </div>
                                     </div>
-                                    <div class="industry__content_item__card">
+                                    <div class="industry__content_item__card active">
                                         <div class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
@@ -1866,14 +2006,18 @@
                         <div class="swiper-slide">
                             <div class="main_container">
                                 <div class="industry__content_item">
-                                    <div>
+                                    <div class="industry__content_item__head">
+                                        <button class="active">Фото</button>
+                                        <button>Описание</button>
+                                    </div>
+                                    <div class="industry__content_item__datas">
                                         <div class="main_title__small industry__content_item__title">Решение</div>
                                         <div class="main_description industry__content_item__description">
                                             <p>Заданная динамика рынка стеллажного оборудования требует разработок совершенно новых конструктивных решений для эффективной организации пространства, причем неважно супермаркета или распределительного центра. </p>
                                             <p>Любая идея или пожелания клиента переводятся на язык конструктива и реализуются в новых разработках инженеров-конструкторов «Микрон». Проектирование включает в себя следующие стадии: концептуальное моделирование, техническое проектирование и согласование с клиентом.</p>
                                         </div>
                                     </div>
-                                    <div class="industry__content_item__card">
+                                    <div class="industry__content_item__card active">
                                         <div class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
@@ -1903,6 +2047,7 @@
                     </div>
                 </div>
             </div>
+            <div class="industry__line"></div>
         </section>
         <!-- Industyr end -->
 
@@ -1910,62 +2055,96 @@
         <section class="news">
             <div class="main_container">
                 <h2 class="main_title news__title">Новости</h2>
-                <div class="news__card">
-                    <div class="news__card_item">
-                        <img src="./images/news_card_1.png" alt="">
-                        <div class="news__card_item__date">
-                            <h3>22</h3>
-                            <div>
-                                <span>Декабря</span>
-                                <span>2022</span>
-                            </div>
+                <div class="swiper news__card">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="news__card_item">
+                                <img src="./images/news_card_1.png" alt="">
+                                <div class="news__card_item__date">
+                                    <h3>22</h3>
+                                    <div>
+                                        <span>Декабря</span>
+                                        <span>2022</span>
+                                    </div>
+                                </div>
+                                <div class="news__card_item__title">Кейс самонесущий склад "Петрович"</div>
+                            </a>
                         </div>
-                        <div class="news__card_item__title">Кейс самонесущий склад "Петрович"</div>
-                    </div>
-                    <div class="news__card_item">
-                        <img src="./images/news_card_2.png" alt="">
-                        <div class="news__card_item__date">
-                            <h3>22</h3>
-                            <div>
-                                <span>Декабря</span>
-                                <span>2022</span>
-                            </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="news__card_item">
+                                <img src="./images/news_card_2.png" alt="">
+                                <div class="news__card_item__date">
+                                    <h3>22</h3>
+                                    <div>
+                                        <span>Декабря</span>
+                                        <span>2022</span>
+                                    </div>
+                                </div>
+                                <div class="news__card_item__title">Компания «Микрон» оснастила РЦ X5 Group «Оренбург Север»</div>
+                            </a>
                         </div>
-                        <div class="news__card_item__title">Компания «Микрон» оснастила РЦ X5 Group «Оренбург Север»</div>
-                    </div>
-                    <div class="news__card_item">
-                        <img src="./images/news_card_3.png" alt="">
-                        <div class="news__card_item__date">
-                            <h3>22</h3>
-                            <div>
-                                <span>Декабря</span>
-                                <span>2022</span>
-                            </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="news__card_item">
+                                <img src="./images/news_card_3.png" alt="">
+                                <div class="news__card_item__date">
+                                    <h3>22</h3>
+                                    <div>
+                                        <span>Декабря</span>
+                                        <span>2022</span>
+                                    </div>
+                                </div>
+                                <div class="news__card_item__title">Релиз электронного каталога продукции «Микрон» от 13.10.23</div>
+                            </a>
                         </div>
-                        <div class="news__card_item__title">Релиз электронного каталога продукции «Микрон» от 13.10.23</div>
-                    </div>
-                    <div class="news__card_item">
-                        <img src="./images/news_card_4.png" alt="">
-                        <div class="news__card_item__date">
-                            <h3>22</h3>
-                            <div>
-                                <span>Декабря</span>
-                                <span>2022</span>
-                            </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="news__card_item">
+                                <img src="./images/news_card_4.png" alt="">
+                                <div class="news__card_item__date">
+                                    <h3>22</h3>
+                                    <div>
+                                        <span>Декабря</span>
+                                        <span>2022</span>
+                                    </div>
+                                </div>
+                                <div class="news__card_item__title">Компания «Микрон» приняла участие в выставке "CeMAT 2023"</div>
+                            </a>
                         </div>
-                        <div class="news__card_item__title">Компания «Микрон» приняла участие в выставке "CeMAT 2023"</div>
-                    </div>
-                    <div class="news__card_item">
-                        <img src="./images/news_card_5.png" alt="">
-                        <div class="news__card_item__logo">
-                            <img src="./images/logo/header_logo.svg" alt="">
+                        <div class="swiper-slide">
+                            <a href="#" class="news__card_item">
+                                <img src="./images/news_card_5.png" alt="">
+                                <div class="news__card_item__logo">
+                                    <img src="./images/logo/header_logo.svg" alt="">
+                                </div>
+                                <div class="news__card_item__title_red">Все новости"</div>
+                            </a>
                         </div>
-                        <div class="news__card_item__title_red">Все новости"</div>
                     </div>
                 </div>
+                <div class="news__card_pagination"></div>
             </div>
         </section>
         <!-- News end -->
+
+        <!-- Feedback -->
+        <section class="feedback">
+            <div class="main_container">
+                <h2 class="main_title feedback__title">Обратная связь</h2>
+                <p class="feedback__description">Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.</p>
+                <form action="">
+                    <input type="text" placeholder="Имя*" class="input_light">
+                    <input type="tel" placeholder="Телефон*" class="input_light">
+                    <label>* обязательные поля для ввода.</label>
+                    <div class="main_checkbox">
+                        <input type="checkbox">
+                        <span>
+                            Заполняя данную форму, Вы подтверждаете согласие с условиями <a href="#">политики конфиденциальности и пользовательского соглашения.</a>
+                        </span>
+                    </div>
+                    <button type="submit" class="btn_red btn_red__disabled" disabled>Отправить</button>
+                </form>
+            </div>
+        </section>
+        <!-- Feedback end -->
 
         <!-- footer -->
         <footer class="footer">

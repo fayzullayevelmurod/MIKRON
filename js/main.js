@@ -57,8 +57,26 @@ let products_tab_head = new Swiper('.products .main_tab_head .swiper', {
     },
 })
 
+let products_active_idx = 0;
+
+$('.products_title__btn_prev').click(function () {
+    if (products_active_idx > 0) {
+        products_active_idx--;
+    }
+    $('.main_tab_head .main_title__small')[products_active_idx].click();
+    products_tab_head.slidePrev()
+})
+
+$('.products_title__btn_next').click(function () {
+    if (products_active_idx < products_tab_head.slides.length - 1) {
+        products_active_idx++;
+    }
+    $('.main_tab_head .main_title__small')[products_active_idx].click();
+    products_tab_head.slideNext()
+})
+
 let advantage_card = new Swiper('.advantages__card', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 20,
     pagination: {
         el: ".advantages__card_paginations",
@@ -67,6 +85,9 @@ let advantage_card = new Swiper('.advantages__card', {
     breakpoints: {
         1000: {
             slidesPerView: 3,
+        },
+        700: {
+            slidesPerView: 2,
         }
     }
 })
@@ -140,6 +161,8 @@ let industry_content_swiper = new Swiper('.industry__content_swiper', {
     slidesPerView: 1,
     spaceBetween: 0,
     simulateTouch: false,
+    allowTouchMove: false,
+    speed: 0,
 })
 
 let industry_tab_head_btn = document.querySelectorAll('.industry__tab_head__btn');
@@ -150,11 +173,30 @@ if (industry_tab_head_btn.length) {
                 btn.classList.remove('industry__tab_head__btn_active');
             })
             el.classList.add('industry__tab_head__btn_active');
-            // industry_content_swiper.slideTo(idx);
-            // makeIndustryContentPosition();
+            industry_content_swiper.slideTo(idx);
+            if (window.innerWidth > 1000) {
+                makeIndustryContentPosition();
+            }
         }
     })
 }
+
+$('.industry__content_item').each(function (idx, el) {
+    $($(el).find('.industry__content_item__head button')).each(function (btn_idx, btn) {
+        $(btn).click(function () {
+            $($(el).find('.industry__content_item__head button')).not(btn).removeClass('active');
+            $(btn).addClass('active');
+            
+            if (btn_idx == 0) {
+                $($(el).find('.industry__content_item__datas')).removeClass('active')
+                $($(el).find('.industry__content_item__card')).addClass('active')
+            } else {
+                $($(el).find('.industry__content_item__datas')).addClass('active')
+                $($(el).find('.industry__content_item__card')).removeClass('active')
+            }
+        })
+    })
+})
 
 function makeIndustryContentPosition () {
     let industry__content_item = document.querySelectorAll('.industry__content_item');
@@ -162,7 +204,9 @@ function makeIndustryContentPosition () {
         industry__content_item.forEach(item => {
             let card = item.querySelector('.industry__content_item__card');
             let left = item.getBoundingClientRect().left + item.getBoundingClientRect().width;
-            card.style.left = left + 'px';
+            if (window.innerWidth > 1000) {
+                card.style.left = left + 'px';
+            }
             let industyr_card_swiper = new Swiper(card.querySelector('.swiper'), {
                 slidesPerView: 1,
                 spaceBetween: 0,
@@ -175,30 +219,105 @@ function makeIndustryContentPosition () {
     }
 }
 
+var init = false;
+var swiper;
+function swiperCard() {
+    if (window.innerWidth <= 1000) {
+        if (!init) {
+            init = true;
+            swiper = new Swiper(".clients__card", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                breakpoints: {
+                    700: {
+                        slidesPerView: 2,
+                    }
+                }
+            });
+        }
+    } else if (init) {
+        swiper.destroy();
+        init = false;
+    }
+}
+
+var init2 = false;
+var swiper2;
+function swiperCard2() {
+    if (window.innerWidth <= 1000) {
+        if (!init2) {
+            init2 = true;
+            swiper2 = new Swiper(".news__card", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.news__card_pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    700: {
+                        slidesPerView: 2,
+                    }
+                }
+            });
+        }
+    } else if (init2) {
+        swiper2.destroy();
+        init2 = false;
+    }
+}
+
 makeIndustryContentPosition();
+if ($('.clients__card').length) {
+    swiperCard();
+}
+
+if ($('.news__card').length) {
+    swiperCard2();
+}
 
 window.addEventListener("resize", () => {
     if (about_company_statistic) {
         aboutCompanyStatisticPosition();
     }
+    if ($('.clients__card').length) {
+        swiperCard();
+    }
+    if ($('.news__card').length) {
+        swiperCard2();
+    }
     makeIndustryContentPosition();
 });
 
 function aboutCompanyStatisticPosition () {
-    let rect = document.querySelector('.about-company__content').getBoundingClientRect();
-    let left = rect.left + rect.width;
-    let width = window.innerWidth - left - 20;
-    about_company_statistic.style.left = left + 'px';
-    about_company_statistic.style.width = width + 'px';
+    if (window.innerWidth > 1000) {
+        let rect = document.querySelector('.about-company__content').getBoundingClientRect();
+        let left = rect.left + rect.width;
+        let width = window.innerWidth - left;
+        about_company_statistic.style.left = left + 'px';
+        about_company_statistic.style.width = width + 'px';
+    }
 }
 
 let certification_card = new Swiper('.certifcation__card', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
+    pagination: {
+        el: '.certifcation__card_paginations',
+        clickable: true,
+    },
+    breakpoints: {
+        1000: {
+            slidesPerView: 3
+        },
+        700: {
+            slidesPerView: 2,
+        }
+    }
 })
 
 let stages_tab_head = new Swiper('.stages__tab_head', {
-    slidesPerView: 'auot',
+    slidesPerView: 'auto',
     spaceBetween: 20,
 })
 
@@ -333,3 +452,61 @@ $('.search__clear').click(function () {
     $('.search__head input').val('');
 })
 
+let show_certificates = new Swiper('.show_certificates__card', {
+    slidesPerView: 1,
+    speed: 1000,
+    navigation: {
+        nextEl: '.show_certificates__card__next_btn',
+        prevEl: '.show_certificates__card__prev_btn'
+    }
+})
+
+$('.certifcation__card_item img').each(function (idx, el) {
+    if (window.innerWidth > 700) {
+        $(el).click(function () {
+            show_certificates.removeAllSlides();
+            $('.certifcation__card_item img').each(function (img_idx, img) {
+                let src = $(img).attr('src');
+                show_certificates.appendSlide(`<div class="swiper-slide show_certificates__card_item">
+                                <img src="${src}" alt="">
+                            </div>`)
+            })
+            show_certificates.slideTo(idx);
+            $('.show_certificates').addClass('active');
+            $('body').css({overflow: 'hidden'})
+        })
+    }
+})
+
+$('.show_certificates__close').click(function () {
+    show_certificates.removeAllSlides();
+    $('.show_certificates').removeClass('active');
+    $('body').css({overflow: 'visible'})
+})
+
+$('.input_file').each(function (idx, el) {
+    $(el).click(function () {
+        let input = $(el).find('input[type="file"]')[0];
+        $(input).focus().get(0).click(); 
+    })
+
+    $(el).find('input[type="file"]').on('change', function (e) {
+        const file = e.target.files;
+        if (file.length) {
+            $(el).find('.input_file__name')[0].textContent = file[0].name;
+            $(el).addClass('active');
+        } else {
+            $(el).find('.input_file__name')[0].textContent = "Загрузить файлы";
+            $(el).removeClass('active');
+        }
+    })
+})
+
+$('.btn_grey').click(function (e) {
+    e.preventDefault();
+    $('.feedback-modal').addClass('active');
+})
+
+$('.feedback-modal__close').click(function () {
+    $('.feedback-modal').removeClass('active');
+})
