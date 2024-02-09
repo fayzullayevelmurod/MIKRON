@@ -3690,6 +3690,134 @@ body {
   margin-top: 40px;
 }
 
+.object-card {
+  padding: 40px 0;
+}
+.object-card__title {
+  font-size: 32px;
+}
+.object-card .main_title {
+  margin-bottom: 20px;
+}
+.object-card p {
+  margin-bottom: 20px;
+}
+
+.about-object {
+  background: #F6F6F6;
+  padding-top: 40px;
+}
+@media screen and (max-width: 700px) {
+  .about-object {
+    padding-top: 20px;
+  }
+}
+.about-object .main_title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.about-object__datas {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 700px) {
+  .about-object__datas {
+    flex-direction: column;
+  }
+}
+.about-object__datas .left_block,
+.about-object__datas .right_block {
+  width: calc(100% - 10px);
+}
+@media screen and (max-width: 700px) {
+  .about-object__datas .left_block,
+  .about-object__datas .right_block {
+    width: 100%;
+  }
+}
+.about-object__datas .key {
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: #1E1E1E;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 700px) {
+  .about-object__datas .key {
+    font-size: 18px;
+  }
+}
+.about-object__datas .value {
+  color: #AB000B;
+  font-size: 24px;
+  line-height: 160%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 700px) {
+  .about-object__datas .value {
+    font-size: 20px;
+  }
+}
+
+.about-photo {
+  position: relative;
+  z-index: 2;
+  padding: 40px 0;
+}
+@media screen and (max-width: 700px) {
+  .about-photo {
+    padding: 20px 0;
+  }
+}
+.about-photo__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+}
+.about-photo .main_title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 700px) {
+  .about-photo .main_title {
+    margin-bottom: 20px;
+  }
+}
+.about-photo .img_wrapper {
+  position: relative;
+}
+.about-photo .img_wrapper img {
+  width: 100%;
+}
+.about-photo .img_wrapper .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(171, 0, 11, 0.75);
+  padding: 20px;
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 400;
+  color: #FFF;
+}
+@media screen and (max-width: 700px) {
+  .about-photo .img_wrapper .description {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
 .footer {
   background: #000;
   color: #fff;
