@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIKRON</title>
+
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Link Bootstrap's CSS -->
@@ -15,7 +16,7 @@
 <body>
     <div class="wrapper">
         <!-- header -->
-        <header class="header top-0 start-0 w-100">
+        <header class="header position-absolute top-0 start-0 w-100">
             <div class="header_top bg-white">
                 <div class="main_container d-flex align-items-center justify-content-between">
                     <a href="/" class="header_logo">
@@ -417,181 +418,232 @@
                 <a href="#" class="btn_red">Показать все результаты</a>
             </div>
         </section>
+
+        <section class="feedback-modal">
+            <div class="feedback-modal__content">
+                <button class="feedback-modal__close">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 25L1 1M1 25L25 1" stroke="#1E1E1E"/>
+                    </svg>
+                </button>
+                <h2 class="main_title feedback-modal__title">Обратная связь</h2>
+                <div class="main_tab">
+                    <div class="main_tab_head">
+                        <button class="active">Заказать звонок</button>
+                        <button>Оставить заявку</button>
+                    </div>
+                    <div class="main_tab_body">
+                        <div class="main_tab_item active">
+                            <form class="feedback-modal__content_form">
+                                <div class="inputs">
+                                    <input type="text" placeholder="Имя*" class="input_light">
+                                    <input type="tel" placeholder="Телефон*" class="input_light">
+                                </div>
+                                <textarea placeholder="Сообщение" class="input_light"></textarea>
+                                <label>* обязательные поля для ввода.</label>
+                                <div class="main_checkbox">
+                                    <input type="checkbox">
+                                    <span>
+                                        Заполняя данную форму, Вы подтверждаете согласие с условиями <a href="#">политики конфиденциальности и пользовательского соглашения.</a>
+                                    </span>
+                                </div>
+                                <button type="submit" class="btn_red btn_red__disabled" disabled>Отправить</button>
+                            </form>
+                        </div>
+                        <div class="main_tab_item">
+                            <form class="feedback-modal__content_form">
+                                <div class="inputs">
+                                    <input type="text" placeholder="Имя*" class="input_light">
+                                    <input type="tel" placeholder="Телефон*" class="input_light">
+                                    <input type="email" placeholder="Почта*" class="input_light">
+                                </div>
+                                <textarea placeholder="Сопроводительное письмо" class="input_light"></textarea>
+                                <div class="input_file">
+                                    <input type="file" name="" id="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.2038 10.23L8.61375 24L7.56375 22.935L21.1537 9.165C22.8937 7.41 22.8937 4.56 21.1537 2.805C19.4287 1.05 16.6088 1.05 14.8838 2.805L2.32875 15.525C1.17375 16.695 1.17375 18.585 2.32875 19.77C3.48375 20.94 5.35875 20.94 6.51375 19.77L19.0688 7.065C19.6538 6.48 19.6538 5.535 19.0688 4.95C18.4988 4.365 17.5538 4.365 16.9837 4.95L5.46375 16.59L4.41375 15.525L15.9188 3.87C17.0737 2.7 18.9487 2.7 20.1038 3.87C21.2588 5.04 21.2588 6.93 20.1038 8.1L7.56375 20.82C5.82375 22.575 3.01875 22.575 1.29375 20.82C-0.43125 19.065 -0.43125 16.215 1.29375 14.46L13.8488 1.755C16.1588 -0.584999 19.9088 -0.584999 22.2188 1.755C24.5138 4.095 24.5138 7.89 22.2038 10.23Z" fill="#AB000B"/>
+                                    </svg>
+                                    <span class="input_file__name">Загрузить файлы</span>
+                                </div>
+                                <label>* обязательные поля для ввода.</label>
+                                <div class="main_checkbox">
+                                    <input type="checkbox">
+                                    <span>
+                                        Заполняя данную форму, Вы подтверждаете согласие с условиями <a href="#">политики конфиденциальности и пользовательского соглашения.</a>
+                                    </span>
+                                </div>
+                                <button type="submit" class="btn_red btn_red__disabled" disabled>Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- header -->
 
         <!-- project_client -->
-        <section class="project_client">
+        <section class="project_client about">
             <div class="project_client_title">
                 <div class="main_container">
                     <h2 class="main_title">
-                        Проекты
+                        О компании
                     </h2>
                     <ul class="breadcrumb d-flex align-items-center">
                         <li class="active">
                             <a href="#" class="d-flex align-items-center">  
-                                Клиенты
+                                Опытный завод
                             </a>
                             <span></span>
                         </li>
                         <li>
                             <a href="#" class="d-flex align-items-center">
-                                Объекты
+                                Наш подход
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center">
+                                Карьера
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center">
+                                Пресс-центр
                             </a>
                             <span></span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="project_client_wrapper">
-                <div class="main_container">
-                    <h3>
-                        Наши клиенты – крупнейшие розничные операторы и другие торговые сети России!
-                    </h3>
-                    <p>
-                        Подход к каждому клиенту индивидуален, любые задачи в компании решаются быстро с использованием современных технологий производства и управления. В число клиентов компании «Микрон» входят как ведущие торговые сети, известные практически каждому российскому покупателю, так и крупные производственные предприятия, логистические и складские операторы.
-                    </p>
+            <div class="main_container">
+                <ul class="breadcrumb_bottom">
+                    <li>
+                        <a href="./about.html">О предприятии</a>
+                    </li>
+                    <li>
+                        <a href="./about-history.html" class="active">История</a>
+                    </li>
+                    <li>
+                        <a href="./about-document.html">Документация</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- project_client -->
 
-                    <div class="project_client_cards d-flex align-items-stretch">
-                        <div class="project_client_card">
-                            <h3>
-                                Подход
-                            </h3>
-                            <span></span>
-                            <div class="project_client_text d-flex flex-column">
-                                <p>
-                                    Система управления «Lean Manufacturing» («Бережливое производство»).
-                                </p>
-                                <p>
-                                    Система менеджмента качества ISO 9001-2015.
-                                </p>
-                                <p>
-                                    Широко развитая дилерская сеть.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="project_client_card">
-                            <h3>
-                                Процессы
-                            </h3>
-                            <span></span>
-                            <div class="project_client_text d-flex flex-column">
-                                <p>
-                                    Короткий срок изготовления (от 7 дней).
-                                </p>
-                                <p>
-                                    Система менеджмента качества ISO 9001-2015.
-                                </p>
-                                <p>
-                                    Широко развитая дилерская сеть.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="project_client_card">
-                            <h3>
-                                Продукция
-                            </h3>
-                            <span></span>
-                            <div class="project_client_text d-flex flex-column">
-                                <p>
-                                    Система управления «Lean Manufacturing» («Бережливое производство»).
-                                </p>
-                                <p>
-                                    Система менеджмента качества ISO 9001-2015.
-                                </p>
-                                <p>
-                                    Широко развитая дилерская сеть.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- About factory -->
+        <section class="about-factory">
+            <img src="./images/about_history_bg.png" class="about-factory__bg" alt="">
+            <div class="main_container">
+                <h2 class="about-factory__title">Памятные даты в истории предприятия</h2>
+                <p class="about-factory__description">«Опытный завод «Микрон» - один из крупнейших российских производителей стеллажей для продовольственных и непродовольственных секторов современной торговли, для распределительных центров и различных видов складов.</p>
+                <div class="about-factory__btns">
+                    <a href="#" class="btn_red">Смотреть презентацию</a>
+                    <a href="#" class="btn_grey">Найти дилера</a>
                 </div>
             </div>
-            <div class="our_clients">
-                <div class="main_container">
-                    <h3>
-                        Наши клиенты
-                    </h3>
-                    <p>
-                        В число клиентов ОЗ "Микрон" входят зарекомендовавшие себя на рынке компании.
-                    </p>
-                    <div class="our_clients_cards">
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="./images/clients_card.svg" alt="">
-                        </a>
-                    </div>
+        </section>
+        <!-- About factory end -->
+
+        <!-- About year slider -->
+        <section class="year-slider">
+            <div class="main_container">
+                <div class="year-slider__btn">
+                    <button class="year-slider__btn_prev">
+                        <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.49952 18L0.679688 9.5L8.49952 1" stroke="#1E1E1E" stroke-linecap="round"/>
+                        </svg>                          
+                    </button>
+                    <button class="year-slider__btn_next">
+                        <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.500469 18L8.32031 9.5L0.500471 1.00001" stroke="#AB000B" stroke-linecap="round"/>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="our_clients_slider_wrapper">
-                <div class="main_container">
-                    <div class="swiper our_clients_slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="installation_card">
-                                    <a href="#">
-                                        <img src="./images/clients_card.svg" alt="">
-                                    </a>
+                <div class="year-slider__pagination"></div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="year-slider__item">
+                                <div class="year-slider__item_head">
+                                    2018
                                 </div>
+                                <div class="year-slider__item_bottom">
+                                    <div class="year-slider__item_left">
+                                        <img src="./images/year_slider_card_1.png" alt=""/>
+                                        <div class="datas">
+                                            <div class="title">20</div>
+                                            <div class="subtitle">Лет Опытному заводу «Микрон» </div>
+                                        </div>
+                                    </div>
+                                    <div class="year-slider__item_right">
+                                        <div class="title">Опытному заводу «Микрон» 20 лет. Прошел 5 юбилейный дилерский семинар.</div>
+                                        <div class="main_description">
+                                            <p>Опытный завод «Микрон» принял участие в IХ-ой Промышленной выставке складского оборудования и технологий СеМАТ Russia 2018, в V Международной выставке INNOSKLAD.</p>
+                                            <p>Разработана автоматизированная стеллажная система с шаттлами «ОЗ «Микрон».</p>
+                                            <p>Введены в эксплуатацию: автоматическая машина для сварки сеток IDEAL, модели GAM 116, автоматический правильно-отрезной станок Milani (Италия), роботизированный комплекс на базе двух промышленных роботов Yaskawa/Motoman, ленточнопильный станок Pilous ARG 300, листогибочный пресс Hilalsan.</p>
+                                            <p>Автопарк завода увеличен на 7 новых многотонных автомобилей с целью повышения качества логистических услуг.</p>
+                                            <p>Получен сертификат ISO 9001:2015.</p>
+                                            <p>Присвоен 4-ый самый высокий уровень квалификации «Умею обучать» 2 сотрудникам предприятия. Численность сотрудников предприятия увеличилась более чем на 100 человек.</p>
+                                            <p>Подано 806 предложений по улучшению, сумма экономического эффекта составила 2 млн. рублей.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="year-slider__item_more">Узнать больше</button>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="installation_card">
-                                    <a href="#">
-                                        <img src="./images/clients_card.svg" alt="">
-                                    </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-slider__item">
+                                <div class="year-slider__item_head">
+                                    2017
                                 </div>
+                                <div class="year-slider__item_bottom">
+                                    <div class="year-slider__item_left">
+                                        <img src="./images/year_slider_card_2.png" alt=""/>
+                                        <div class="datas">
+                                            <div class="title">1817</div>
+                                            <div class="subtitle">Количество поданных предложений в 2015 году по улучшению</div>
+                                        </div>
+                                    </div>
+                                    <div class="year-slider__item_right">
+                                        <div class="title">Системе менеджмента качества на Опытном заводе Микрон испонилось 10 лет</div>
+                                        <div class="main_description">
+                                            <p>Опытный завод «Микрон» принял участие в 6-ой Промышленной выставке складского оборудования и технологий СеМАТ Russia 2015. Опытный завод «Микрон» вступил в Национальную ассоциацию производителей и поставщиков стеллажей и складского оборудования.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="year-slider__item_more">Узнать больше</button>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="installation_card">
-                                    <a href="#">
-                                        <img src="./images/clients_card.svg" alt="">
-                                    </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="year-slider__item">
+                                <div class="year-slider__item_head">
+                                    2016
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="installation_card">
-                                    <a href="#">
-                                        <img src="./images/clients_card.svg" alt="">
-                                    </a>
+                                <div class="year-slider__item_bottom">
+                                    <div class="year-slider__item_left">
+                                        <img src="./images/year_slider_card_3.png" alt=""/>
+                                        <div class="datas">
+                                            <div class="title">2.3</div>
+                                            <div class="subtitle">рост объёмов реализации продукции</div>
+                                        </div>
+                                    </div>
+                                    <div class="year-slider__item_right">
+                                        <div class="title">Аудит предприятия на соответствие ISO 9001:2008. Оптимизация производственного цикла</div>
+                                        <div class="main_description">
+                                            <p>В результате аудита обществом по сертификации «ТЮФ НОРД СЕРТ ГмбХ» СМК предприятие было признано соответствующим ISO 9001:2008. На производстве внедрены электронные терминалы с конструкторской и технологической документацией на каждом рабочем месте, что позволило полностью исключить документацию на бумажных носителях.</p>
+                                        </div>
+                                    </div>
                                 </div>
+                                <button class="year-slider__item_more">Узнать больше</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- project_client -->
+        <!-- About year slider end -->
 
         <!-- footer -->
         <footer class="footer">
