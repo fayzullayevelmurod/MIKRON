@@ -2806,6 +2806,54 @@ body {
   line-height: 160%;
   color: #fff;
 }
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one .installation_head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one .installation_head_right {
+  display: flex;
+  flex-direction: column;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one .installation_head_right span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #000;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one h6 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 0;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000;
+  margin-bottom: 0;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one h4 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 160%;
+  color: #000;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text_one h5 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000;
+}
 @media screen and (max-width: 993px) {
   .project_client_in .main_container .project_client_card .projectobject_desktop {
     display: none;
