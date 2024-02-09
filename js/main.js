@@ -267,13 +267,112 @@ function swiperCard2() {
     }
 }
 
+var init3 = false;
+var swiper3;
+function swiperCard3() {
+    if (window.innerWidth <= 1000) {
+        if (!init3) {
+            init3 = true;
+            swiper3 = new Swiper(".about-card__slider .swiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.about-card__slider_pagination',
+                    clickable: true,
+                },
+            });
+        }
+    } else if (init3) {
+        swiper3.destroy();
+        init3 = false;
+    }
+}
+
+var init4 = false;
+var swiper4;
+
+function swiperCard4() {
+    var cardElements = document.querySelectorAll(".download-list__card");
+
+    if (window.innerWidth <= 1000) {
+        if (!init4) {
+            init4 = true;
+
+            cardElements.forEach(function(cardElement, idx) {
+                swiper4 = new Swiper(cardElement, {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    pagination: {
+                        el: $('.download-list__slide_pagination')[idx],
+                        type: 'progressbar'
+                    },
+                    navigation: {
+                        nextEl: $('.download-list__slide_btn__next')[idx],
+                        prevEl: $('.download-list__slide_btn__prev')[idx]
+                    },
+                    breakpoints: {
+                        700: {
+                            slidesPerView: 2,
+                        }
+                    }
+                });
+            });
+        }
+    } else if (init4) {
+        cardElements.forEach(function(cardElement) {
+            var swiperInstance = cardElement.swiper;
+            if (swiperInstance) {
+                swiperInstance.destroy();
+            }
+        });
+
+        init4 = false;
+    }
+}
+
+var init5 = false;
+var swiper5;
+function swiperCard5() {
+    if (window.innerWidth <= 1000) {
+        if (!init5) {
+            init5 = true;
+            swiper5 = new Swiper(".about-factory__card", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.about-factory__card_pagination',
+                    type: 'progressbar'
+                },
+                breakpoints: {
+                    700: {
+                        slidesPerView: 2,
+                    }
+                }
+            });
+        }
+    } else if (init5) {
+        swiper5.destroy();
+        init5 = false;
+    }
+}
+
 makeIndustryContentPosition();
 if ($('.clients__card').length) {
     swiperCard();
 }
 
-if ($('.news__card').length) {
+if ($('.about-card__slider').length) {
     swiperCard2();
+}
+
+if ($('.news__card').length) {
+    swiperCard3();
+}
+if ($('.download-list__card').length) {
+    swiperCard4();
+}
+if ($('.about-factory__card').length) {
+    swiperCard5();
 }
 
 window.addEventListener("resize", () => {
@@ -285,6 +384,15 @@ window.addEventListener("resize", () => {
     }
     if ($('.news__card').length) {
         swiperCard2();
+    }
+    if ($('.about-card__slider').length) {
+        swiperCard3();
+    }
+    if ($('.download-list__card').length) {
+        swiperCard4();
+    }
+    if ($('.about-factory__card').length) {
+        swiperCard5();
     }
     makeIndustryContentPosition();
 });
@@ -314,6 +422,19 @@ let certification_card = new Swiper('.certifcation__card', {
             slidesPerView: 2,
         }
     }
+})
+
+let year_slider = new Swiper('.year-slider .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.year-slider__btn_next',
+        prevEl: '.year-slider__btn_prev'
+    },
+    pagination: {
+        el: ".year-slider__pagination",
+        type: "progressbar",
+    },
 })
 
 let stages_tab_head = new Swiper('.stages__tab_head', {
