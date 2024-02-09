@@ -116,6 +116,21 @@ let installation_slider = new Swiper(".installation_slider", {
 // services
 
 // services
+let object_slider = new Swiper(".object_slider", {
+    pagination: {
+        el: ".object_slider-pagination",
+        type: "progressbar",
+    },
+    breakpoints: {
+        320: {
+            spaceBetween: 20,
+            slidesPerView: 1,
+        }
+    }
+});
+// services
+
+// services
 let our_clients_slider = new Swiper(".our_clients_slider", {
     navigation: {
       nextEl: ".installation_slider_next",

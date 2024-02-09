@@ -141,6 +141,7 @@ body {
   letter-spacing: 0%;
   border-radius: 2px;
   background: rgb(171, 0, 11);
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 .breadcrumb {
@@ -2671,6 +2672,250 @@ body {
 }
 .feedback form .btn_red {
   width: 100%;
+}
+
+.project_client_title_under {
+  padding: 40px 0;
+}
+@media screen and (max-width: 993px) {
+  .project_client_title_under {
+    padding: 20px 0;
+  }
+}
+.project_client_title_under h3 {
+  color: rgb(30, 30, 30);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 0%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 993px) {
+  .project_client_title_under h3 {
+    display: none;
+  }
+}
+.project_client_title_under h4 {
+  display: none;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 0%;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 993px) {
+  .project_client_title_under h4 {
+    display: block;
+  }
+}
+.project_client_title_under .project_client_title_under_link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (max-width: 993px) {
+  .project_client_title_under .project_client_title_under_link {
+    display: none;
+  }
+}
+.project_client_title_under .project_client_title_under_link a {
+  color: rgb(30, 30, 30);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+.project_client_title_under .project_client_title_under_link a.active {
+  color: #AB000B;
+}
+
+.project_client_in {
+  margin-bottom: 20px;
+}
+.project_client_in .main_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.project_client_in .main_container .project_client_card {
+  width: calc(33.3333333333% - 13.3333333333px);
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media screen and (max-width: 993px) {
+  .project_client_in .main_container .project_client_card {
+    width: 100%;
+  }
+}
+.project_client_in .main_container .project_client_card:nth-child(1) {
+  width: calc(66.6666666667% - 10px);
+}
+@media screen and (max-width: 993px) {
+  .project_client_in .main_container .project_client_card:nth-child(1) {
+    display: none;
+  }
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text .installation_head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text .installation_head_right {
+  display: flex;
+  flex-direction: column;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text .installation_head_right span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #fff;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text h6 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 140%;
+  color: #fff;
+  margin-bottom: 0;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #fff;
+  margin-bottom: 0;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text h4 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 160%;
+  color: #fff;
+}
+.project_client_in .main_container .project_client_card:nth-child(1) .installation_card_text h5 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #fff;
+}
+@media screen and (max-width: 993px) {
+  .project_client_in .main_container .project_client_card .projectobject_desktop {
+    display: none;
+  }
+}
+.project_client_in .main_container .project_client_card .object_card_media {
+  display: none;
+}
+@media screen and (max-width: 993px) {
+  .project_client_in .main_container .project_client_card .object_card_media {
+    display: block;
+    height: 240px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.project_client_in .main_container .project_client_card img {
+  width: 100%;
+}
+.project_client_in .main_container .project_client_card .installation_card_text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  inset: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project_client_in .main_container .project_client_card .installation_card_text .installation_head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 993px) {
+  .project_client_in .main_container .project_client_card .installation_card_text .installation_head {
+    gap: 10px;
+  }
+}
+.project_client_in .main_container .project_client_card .installation_card_text .installation_head_right {
+  display: flex;
+  flex-direction: column;
+}
+.project_client_in .main_container .project_client_card .installation_card_text .installation_head_right span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #000;
+}
+.project_client_in .main_container .project_client_card .installation_card_text h6 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 0;
+}
+.project_client_in .main_container .project_client_card .installation_card_text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 993px) {
+  .project_client_in .main_container .project_client_card .installation_card_text p {
+    font-size: 14px;
+  }
+}
+.project_client_in .main_container .project_client_card .installation_card_text h4 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 160%;
+  color: #000;
+}
+@media screen and (max-width: 993px) {
+  .project_client_in .main_container .project_client_card .installation_card_text h4 {
+    font-size: 24px;
+  }
+}
+.project_client_in .main_container .project_client_card .installation_card_text h5 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #AB000B;
+}
+@media screen and (max-width: 993px) {
+  .project_client_in .main_container .project_client_card .installation_card_text h5 {
+    font-size: 18px;
+  }
+}
+.project_client_in .main_container .object_slider .object_slider-pagination {
+  position: absolute;
+  top: 99.3%;
+  z-index: 2;
+  height: 3px;
+  width: 100%;
+}
+.project_client_in .main_container .object_slider .object_slider-pagination .swiper-pagination-progressbar-fill {
+  background-color: #AB000B;
+}
+
+.red_btn {
+  margin-top: 20px;
+  background-color: #AB000B;
+}
+@media screen and (max-width: 576px) {
+  .red_btn {
+    width: 100%;
+  }
 }
 
 .footer {
