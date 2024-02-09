@@ -92,6 +92,52 @@ let advantage_card = new Swiper('.advantages__card', {
     }
 })
 
+// services
+let installation_slider = new Swiper(".installation_slider", {
+    navigation: {
+      nextEl: ".installation_slider_next",
+      prevEl: ".installation_slider_prev",
+    },
+    pagination: {
+        el: ".installation-pagination",
+        type: "progressbar",
+    },
+    breakpoints: {
+        320: {
+            spaceBetween: 20,
+            slidesPerView: 1,
+        },
+        576: {
+            spaceBetween: 20,
+            slidesPerView: 2,
+        }
+    }
+});
+// services
+
+// services
+let our_clients_slider = new Swiper(".our_clients_slider", {
+    navigation: {
+      nextEl: ".installation_slider_next",
+      prevEl: ".installation_slider_prev",
+    },
+    pagination: {
+        el: ".installation-pagination",
+        type: "progressbar",
+    },
+    breakpoints: {
+        320: {
+            spaceBetween: 20,
+            slidesPerView: 1,
+        },
+        576: {
+            spaceBetween: 20,
+            slidesPerView: 2,
+        }
+    }
+});
+// services
+
 let about_company_statistic_slider = new Swiper('.about-company__statistic__card', {
     slidesPerView: 1,
     spaceBetween: 0,
