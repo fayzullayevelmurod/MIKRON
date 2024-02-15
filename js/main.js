@@ -31,12 +31,8 @@ if (main_tabs.length) {
 let home_slider = new Swiper('.home_slider', {
     slidesPerView: 1,
     spaceBetween: 0,
-    simulateTouch: false,
+    speed: 2000,
     loop: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false
-    },
     navigation: {
         nextEl: ".home_slider__btn_next",
         prevEl: ".home_slider__btn_prev"
@@ -95,8 +91,8 @@ let advantage_card = new Swiper('.advantages__card', {
 // services
 let installation_slider = new Swiper(".installation_slider", {
     navigation: {
-      nextEl: ".installation_slider_next",
-      prevEl: ".installation_slider_prev",
+        nextEl: ".installation_slider_next",
+        prevEl: ".installation_slider_prev",
     },
     pagination: {
         el: ".installation-pagination",
@@ -133,8 +129,8 @@ let object_slider = new Swiper(".object_slider", {
 // services
 let our_clients_slider = new Swiper(".our_clients_slider", {
     navigation: {
-      nextEl: ".installation_slider_next",
-      prevEl: ".installation_slider_prev",
+        nextEl: ".installation_slider_next",
+        prevEl: ".installation_slider_prev",
     },
     pagination: {
         el: ".installation-pagination",
@@ -425,8 +421,10 @@ function aboutCompanyStatisticPosition () {
 let certification_card = new Swiper('.certifcation__card', {
     slidesPerView: 1,
     spaceBetween: 20,
+    speed: 1000,
     pagination: {
         el: '.certifcation__card_paginations',
+        type: "progressbar",
         clickable: true,
     },
     breakpoints: {
@@ -499,6 +497,9 @@ let stage_form = new Swiper('.stages__form', {
     slidesPerView: 1,
     spaceBetween: 0,
     simulateTouch: false,
+    speed: 0,
+    // effect: 'fade',
+
 })
 
 let stages_tab_head_btns = document.querySelectorAll('.stages__tab_head__item');
@@ -557,6 +558,7 @@ $('.search__open').click(function () {
         $('body').css({
             overflow: 'visible'
         })
+        $(this).removeClass('active');
     } else {
         $('section.search').addClass('active');
         if (window.innerWidth < 1000) {
@@ -565,6 +567,7 @@ $('.search__open').click(function () {
             })
         }
         $('.search__head input').focus();
+        $(this).addClass('active');
     }
 })
 
@@ -622,20 +625,21 @@ $('.show_certificates__close').click(function () {
 
 $('.input_file').each(function (idx, el) {
     $(el).click(function () {
-        let input = $(el).find('input[type="file"]')[0];
-        $(input).focus().get(0).click(); 
+        $('.drop_input_file').slideDown(300)
+        // let input = $(el).find('input[type="file"]')[0];
+        // $(input).focus().get(0).click(); 
     })
 
-    $(el).find('input[type="file"]').on('change', function (e) {
-        const file = e.target.files;
-        if (file.length) {
-            $(el).find('.input_file__name')[0].textContent = file[0].name;
-            $(el).addClass('active');
-        } else {
-            $(el).find('.input_file__name')[0].textContent = "Загрузить файлы";
-            $(el).removeClass('active');
-        }
-    })
+    // $(el).find('input[type="file"]').change( function (e) {
+    //     const file = e.target.files;
+    //     if (file.length) {
+    //         $(el).find('.input_file__name')[0].textContent = file[0].name;
+    //         $(el).addClass('active');
+    //     } else {
+    //         $(el).find('.input_file__name')[0].textContent = "Загрузить файлы";
+    //         $(el).removeClass('active');
+    //     }
+    // })
 })
 
 $('.btn_grey').click(function (e) {
@@ -645,4 +649,61 @@ $('.btn_grey').click(function (e) {
 
 $('.feedback-modal__close').click(function () {
     $('.feedback-modal').removeClass('active');
+})
+
+$('.header_bottom__right_navs a').each(function (idx, el) {
+    if (idx != 0) {
+        $(el).click(function (e) {
+            e.preventDefault();
+            $('.header_bottom__right_navs a').not($(el)).removeClass('active');
+            $(el).addClass('active');
+        })
+    }
+})
+
+$('body').on('dragenter', function () {
+    $('.feedback-modal__content_form .drop_input_file').addClass('bordered')
+})
+
+$('body').on('dragleave', function () {
+    $('.feedback-modal__content_form .drop_input_file').addClass('bordered')
+})
+
+$('body').on('dragover', function () {
+    $('.feedback-modal__content_form .drop_input_file').addClass('bordered')
+})
+
+$('.feedback-modal__content_form .drop_input_file').on('dragenter', function (e) {
+    $(this).addClass('active')
+})
+
+$('.feedback-modal__content_form .drop_input_file').on('dragleave', function (e) {
+    $(this).removeClass('active')
+})
+
+$('.feedback-modal__content_form .drop_input_file').on('dragover', function (e) {
+    e.preventDefault();
+    $(this).addClass('active')
+})
+
+let inputFileWrap = $('.feedback-modal__content_form .drop_input_file')[0];
+
+inputFileWrap.ondrop = e => {
+    e.preventDefault();
+    let file = e.dataTransfer.files;
+    $('.feedback-modal__content_form .drop_input_file').removeClass('bordered').removeClass('active')
+    if (file.length) {
+        $('.feedback-modal__content_form input[type="file"]')[0].files = e.dataTransfer.files;
+        $('.input_file__name')[0].textContent = file[0].name;
+        $('.input_file').addClass('active');
+    }
+}
+
+$('.drop_input_file').slideUp(0);
+$('.drop_input_file button').click(function () {
+    $('.feedback-modal__content_form input[type="file"]').click();
+})
+
+$('button.scroll_top').click(function () {
+    window.scrollTo(0, 0);
 })
