@@ -372,6 +372,36 @@ function swiperCard5() {
     }
 }
 
+var init6 = false;
+var swiper6;
+function swiperCard6() {
+    if (window.innerWidth <= 1000) {
+        if (!init6) {
+            init6 = true;
+            swiper6 = new Swiper(".our_clients_cards", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.our_clients_cards__pagination',
+                    type: 'progressbar'
+                },
+                navigation: {
+                    nextEl: '.our_clients_cards__btn_next',
+                    prevEl: '.our_clients_cards__btn_prev',
+                },
+                breakpoints: {
+                    700: {
+                        slidesPerView: 2,
+                    }
+                }
+            });
+        }
+    } else if (init6) {
+        swiper6.destroy();
+        init6 = false;
+    }
+}
+
 makeIndustryContentPosition();
 if ($('.clients__card').length) {
     swiperCard();
@@ -389,6 +419,9 @@ if ($('.download-list__card').length) {
 }
 if ($('.about-factory__card').length) {
     swiperCard5();
+}
+if ($('.about-factory__card').length) {
+    swiperCard6();
 }
 
 window.addEventListener("resize", () => {
@@ -409,6 +442,9 @@ window.addEventListener("resize", () => {
     }
     if ($('.about-factory__card').length) {
         swiperCard5();
+    }
+    if ($('.our_clients_cards').length) {
+        swiperCard6();
     }
     makeIndustryContentPosition();
 });
@@ -783,4 +819,23 @@ $('.year_modal__close').click(function () {
     $('body').css({
         overflow: 'visible'
     });
+})
+
+let object_cards_slider = new Swiper('.object_cards .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+        el: ".card_item__slider_pagination",
+        type: "progressbar",
+    }
+})
+
+let about_photo_slider = new Swiper('.about-photo__slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+        1000: {
+            spaceBetween: 0,
+        }
+    }
 })
