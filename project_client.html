@@ -15,7 +15,7 @@
 <body>
     <div class="wrapper">
         <!-- header -->
-        <header class="header top-0 start-0 w-100">
+        <header class="header position-absolute top-0 start-0 w-100">
             <div class="header_top bg-white">
                 <div class="main_container d-flex align-items-center justify-content-between">
                     <a href="/" class="header_logo">
@@ -48,24 +48,187 @@
                 </div>
             </div>
             <div class="header_bottom">
-                <div class="main_container d-flex align-items-center justify-content-between">
-                    <ul class="header_bottom__left_navs d-flex align-items-center">
+                <div class="main_container d-flex align-items-stretch justify-content-between">
+                    <ul class="header_bottom__left_navs d-flex align-items-stretch">
                         <li>
                             <button class="search__open">
-                                <img src="./images/icons/search.svg" alt="">
+                                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.6333 12.8667L0.5 17M16.5 7.85714C16.5 11.6442 13.43 14.7143 9.64291 14.7143C5.85585 14.7143 2.78583 11.6442 2.78583 7.85714C2.78583 4.07005 5.85585 1 9.64291 1C13.43 1 16.5 4.07005 16.5 7.85714Z" stroke="white"/>
+                                </svg>
                             </button>
                         </li>
-                        <li>
-                            <a href="#">О компании</a>
+                        <li class="nav_dropdown">
+                            <a class="nav_dropdown__btn" href="#">О компании</a>
+                            <div class="nav_dropdown__list">
+                                <div class="main_container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Опытный завод “Микрон”</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">История</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Документация</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Наш подход</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Преимущества</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Производственная система “Микрон”</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Производство</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Карьера</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Кадровая политика</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Производственное соревнование</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Вакансии</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Пресс-центр</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новости</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Пресса о нас</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#">Продукция</a>
+                        <li class="nav_dropdown">
+                            <a class="nav_dropdown__btn" href="#">Продукция</a>
+                            <div class="nav_dropdown__list">
+                                <div class="main_container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Складские стеллажи</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Фронтальный стеллаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Полочный стеллаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Глубинный стеллаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Мезонинный стеллаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Автоматизированные системы хранения</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Среднегрузовые стеллажи R30</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Аксессуары для складских стеллажей</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Торговое оборудование</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Кассовые боксы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Универсальные стеллажи</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Специализированные стеллажи</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Интегрированные стеллажи</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Аксессуары к торговым стеллажам</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Автоматизация</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Гидроборт</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Универсальная самоходная машина</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Легкий робот транспортирования</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Новые направления</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Аддитивные технологии</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Композитные модули</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#">Проекты</a>
+                        <li class="nav_dropdown nav_dropdown_small position-relative">
+                            <a class="nav_dropdown__btn" href="#">Проекты</a>
+                            <div class="nav_dropdown__list">
+                                <ul>
+                                    <li>
+                                        <a href="#">Клиенты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Объекты</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#">Услуги</a>
+                        <li class="nav_dropdown nav_dropdown_last position-relative">
+                            <a class="nav_dropdown__btn" href="#">Услуги</a>
+                            <div class="nav_dropdown__list">
+                                <ul>
+                                    <li>
+                                        <a href="#">Проектирование и изготовление</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Монтаж оборудования</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Логистика</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Сервисное обслуживание</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Техническое освидетельствование по ГОСТ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Металлообработка</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li>
                             <a href="#">Дилеры</a>
@@ -111,22 +274,46 @@
                         </button>
                         <ul class="main_accordion__list">
                             <li>
-                                <a href="#">link 1</a>
+                                <a href="#">Опытный завод “Микрон”</a>
                             </li>
                             <li>
-                                <a href="#">link 2</a>
+                                <a href="#">История</a>
                             </li>
                             <li>
-                                <a href="#">link 3</a>
+                                <a href="#">Документация</a>
                             </li>
                             <li>
-                                <a href="#">link 4</a>
+                                <a href="#">Наш подход</a>
                             </li>
                             <li>
-                                <a href="#">link 5</a>
+                                <a href="#">Преимущества</a>
                             </li>
                             <li>
-                                <a href="#">link 6</a>
+                                <a href="#">Производственная система “Микрон”</a>
+                            </li>
+                            <li>
+                                <a href="#">Производство</a>
+                            </li>
+                            <li>
+                                <a href="#">Карьера</a>
+                            </li>
+                            <li>
+                                <a href="#">Кадровая политика</a>
+                            </li>
+                            <li>
+                                <a href="#">Производственное соревнование</a>
+                            </li>
+                            <li>
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li>
+                                <a href="#">Пресс-центр</a>
+                            </li>
+                            <li>
+                                <a href="#">Новости</a>
+                            </li>
+                            <li>
+                                <a href="#">Пресса о нас</a>
                             </li>
                         </ul>
                     </li>
@@ -279,22 +466,10 @@
                         </button>
                         <ul class="main_accordion__list">
                             <li>
-                                <a href="#">Link 1</a>
+                                <a href="#">Клиенты</a>
                             </li>
                             <li>
-                                <a href="#">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 4</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 5</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 6</a>
+                                <a href="#">Объекты</a>
                             </li>
                         </ul>
                     </li>
@@ -308,13 +483,10 @@
                         </button>
                         <ul class="main_accordion__list">
                             <li>
-                                <a href="#">Все</a>
-                            </li>
-                            <li>
                                 <a href="#">Проектирование и изготовление</a>
                             </li>
                             <li>
-                                <a href="#">Монтаж оборудование</a>
+                                <a href="#">Монтаж оборудования</a>
                             </li>
                             <li>
                                 <a href="#">Логистика</a>
@@ -326,7 +498,7 @@
                                 <a href="#">Техническое освидетельствование по ГОСТ</a>
                             </li>
                             <li>
-                                <a href="#">Металлобработка</a>
+                                <a href="#">Металлообработка</a>
                             </li>
                         </ul>
                     </li>
@@ -415,6 +587,70 @@
                 </ul>
 
                 <a href="#" class="btn_red">Показать все результаты</a>
+            </div>
+        </section>
+
+        <section class="feedback-modal">
+            <div class="feedback-modal__content">
+                <button class="feedback-modal__close">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 25L1 1M1 25L25 1" stroke="#1E1E1E"/>
+                    </svg>
+                </button>
+                <h2 class="main_title feedback-modal__title">Обратная связь</h2>
+                <div class="main_tab">
+                    <div class="main_tab_head">
+                        <button class="active">Заказать звонок</button>
+                        <button>Оставить заявку</button>
+                    </div>
+                    <div class="main_tab_body">
+                        <div class="main_tab_item active">
+                            <form class="feedback-modal__content_form">
+                                <div class="inputs">
+                                    <input type="text" placeholder="Имя*" class="input_light">
+                                    <input type="tel" placeholder="Телефон*" class="input_light">
+                                </div>
+                                <textarea placeholder="Сообщение" class="input_light"></textarea>
+                                <label>* обязательные поля для ввода.</label>
+                                <div class="main_checkbox">
+                                    <input type="checkbox">
+                                    <span>
+                                        Заполняя данную форму, Вы подтверждаете согласие с условиями <a href="#">политики конфиденциальности и пользовательского соглашения.</a>
+                                    </span>
+                                </div>
+                                <button type="submit" class="btn_red btn_red__disabled" disabled>Отправить</button>
+                            </form>
+                        </div>
+                        <div class="main_tab_item">
+                            <form class="feedback-modal__content_form">
+                                <div class="inputs">
+                                    <input type="text" placeholder="Имя*" class="input_light">
+                                    <input type="tel" placeholder="Телефон*" class="input_light">
+                                    <input type="email" placeholder="Почта*" class="input_light">
+                                </div>
+                                <textarea placeholder="Сопроводительное письмо" class="input_light"></textarea>
+                                <div class="input_file">
+                                    <input type="file" name="" id="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.2038 10.23L8.61375 24L7.56375 22.935L21.1537 9.165C22.8937 7.41 22.8937 4.56 21.1537 2.805C19.4287 1.05 16.6088 1.05 14.8838 2.805L2.32875 15.525C1.17375 16.695 1.17375 18.585 2.32875 19.77C3.48375 20.94 5.35875 20.94 6.51375 19.77L19.0688 7.065C19.6538 6.48 19.6538 5.535 19.0688 4.95C18.4988 4.365 17.5538 4.365 16.9837 4.95L5.46375 16.59L4.41375 15.525L15.9188 3.87C17.0737 2.7 18.9487 2.7 20.1038 3.87C21.2588 5.04 21.2588 6.93 20.1038 8.1L7.56375 20.82C5.82375 22.575 3.01875 22.575 1.29375 20.82C-0.43125 19.065 -0.43125 16.215 1.29375 14.46L13.8488 1.755C16.1588 -0.584999 19.9088 -0.584999 22.2188 1.755C24.5138 4.095 24.5138 7.89 22.2038 10.23Z" fill="#AB000B"/>
+                                    </svg>
+                                    <span class="input_file__name">Загрузить файлы</span>
+                                </div>
+                                <div class="drop_input_file">
+                                    Перетащите один или несколько файлов в эту область <button>или выберите файл.</button>
+                                </div>
+                                <label>* обязательные поля для ввода.</label>
+                                <div class="main_checkbox">
+                                    <input type="checkbox">
+                                    <span>
+                                        Заполняя данную форму, Вы подтверждаете согласие с условиями <a href="#">политики конфиденциальности и пользовательского соглашения.</a>
+                                    </span>
+                                </div>
+                                <button type="submit" class="btn_red btn_red__disabled" disabled>Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- header -->
@@ -691,6 +927,12 @@
             </div>
         </footer>
         <!-- footer -->
+
+        <button class="scroll_top">
+            <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 11.4992L12 0.685547L23.5 11.4992" stroke="white" stroke-linecap="round"/>
+            </svg>
+        </button>
     </div>
 
     <!-- Jquery JS -->

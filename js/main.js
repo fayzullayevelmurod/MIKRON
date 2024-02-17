@@ -151,11 +151,16 @@ let our_clients_slider = new Swiper(".our_clients_slider", {
 
 let about_company_statistic_slider = new Swiper('.about-company__statistic__card', {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 20,
     pagination: {
         el: ".about-company__statistic__card_pagination",
         clickable: true,
     },
+    breakpoints: {
+        1000: {
+            spaceBetween: 0,
+        }
+    }
 })
 
 let about_company_statistic = document.querySelector('.about-company__statistic');
@@ -197,7 +202,7 @@ $('.industry__content_item').each(function (idx, el) {
         $(btn).click(function () {
             $($(el).find('.industry__content_item__head button')).not(btn).removeClass('active');
             $(btn).addClass('active');
-            
+
             if (btn_idx == 0) {
                 $($(el).find('.industry__content_item__datas')).removeClass('active')
                 $($(el).find('.industry__content_item__card')).addClass('active')
@@ -209,7 +214,7 @@ $('.industry__content_item').each(function (idx, el) {
     })
 })
 
-function makeIndustryContentPosition () {
+function makeIndustryContentPosition() {
     let industry__content_item = document.querySelectorAll('.industry__content_item');
     if (industry__content_item.length) {
         industry__content_item.forEach(item => {
@@ -289,7 +294,7 @@ function swiperCard3() {
                 spaceBetween: 20,
                 pagination: {
                     el: '.about-card__slider_pagination',
-                    clickable: true,
+                    type: "progressbar",
                 },
             });
         }
@@ -309,7 +314,7 @@ function swiperCard4() {
         if (!init4) {
             init4 = true;
 
-            cardElements.forEach(function(cardElement, idx) {
+            cardElements.forEach(function (cardElement, idx) {
                 swiper4 = new Swiper(cardElement, {
                     slidesPerView: 1,
                     spaceBetween: 20,
@@ -330,7 +335,7 @@ function swiperCard4() {
             });
         }
     } else if (init4) {
-        cardElements.forEach(function(cardElement) {
+        cardElements.forEach(function (cardElement) {
             var swiperInstance = cardElement.swiper;
             if (swiperInstance) {
                 swiperInstance.destroy();
@@ -376,7 +381,7 @@ if ($('.about-card__slider').length) {
     swiperCard2();
 }
 
-if ($('.news__card').length) {
+if ($('.about-card__slider').length) {
     swiperCard3();
 }
 if ($('.download-list__card').length) {
@@ -408,7 +413,7 @@ window.addEventListener("resize", () => {
     makeIndustryContentPosition();
 });
 
-function aboutCompanyStatisticPosition () {
+function aboutCompanyStatisticPosition() {
     if (window.innerWidth > 1000) {
         let rect = document.querySelector('.about-company__content').getBoundingClientRect();
         let left = rect.left + rect.width;
@@ -436,6 +441,22 @@ let certification_card = new Swiper('.certifcation__card', {
         }
     }
 })
+
+if ($('.certifcation.about')[0]) {
+    certification_card.params.slidesPerView = 4;
+    $(window).on('resize', function(){
+        var width = $(window).width();
+        if(width < 1000 && width >= 700) {
+            certification_card.params.slidesPerView = 3;
+        } else if(width < 700 && width >= 500) {
+            certification_card.params.slidesPerView = 2;
+        } else if(width < 500) {
+            certification_card.params.slidesPerView = 1;
+        } else {
+            certification_card.params.slidesPerView = 4;
+        }
+    }).resize();  
+}
 
 let year_slider = new Swiper('.year-slider .swiper', {
     slidesPerView: 1,
@@ -612,7 +633,7 @@ $('.certifcation__card_item img').each(function (idx, el) {
             })
             show_certificates.slideTo(idx);
             $('.show_certificates').addClass('active');
-            $('body').css({overflow: 'hidden'})
+            $('body').css({ overflow: 'hidden' })
         })
     }
 })
@@ -620,7 +641,7 @@ $('.certifcation__card_item img').each(function (idx, el) {
 $('.show_certificates__close').click(function () {
     show_certificates.removeAllSlides();
     $('.show_certificates').removeClass('active');
-    $('body').css({overflow: 'visible'})
+    $('body').css({ overflow: 'visible' })
 })
 
 $('.input_file').each(function (idx, el) {
@@ -706,4 +727,60 @@ $('.drop_input_file button').click(function () {
 
 $('button.scroll_top').click(function () {
     window.scrollTo(0, 0);
+})
+
+let mouseDown = false;
+let startX, scrollLeft;
+const slider = document.querySelector('.project_client .breadcrumb');
+
+if (slider) {
+    const startDragging = (e) => {
+        mouseDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    }
+    
+    const stopDragging = (e) => {
+        mouseDown = false;
+    }
+    
+    const move = (e) => {
+        e.preventDefault();
+        if (!mouseDown) { return; }
+        const x = e.pageX - slider.offsetLeft;
+        const scroll = x - startX;
+        slider.scrollLeft = scrollLeft - scroll;
+    }
+    
+    // Add the event listeners
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+}
+
+$('.year-slider__item').each(function (idx, el) {
+    $(el).find('.year-slider__item_more').click(function () {
+        $('.year_modal').find('h2').text($(el).find('.year-slider__item_head').text().trim());
+        $('.year_modal').find('.year_modal__img .title').text($(el).find('.year-slider__item_left .title').text().trim());
+        $('.year_modal').find('.year_modal__img .subtitle').text($(el).find('.year-slider__item_left .subtitle').text().trim());
+        $('.year_modal').find('.year_modal__content .title').text($(el).find('.year-slider__item_right .title').text().trim());
+        $('.year_modal').find('.year_modal__content .descriptions').html('');
+        
+        $('.year-slider__item_right .main_description p').each(function (idx, el) {
+            $('.year_modal').find('.year_modal__content .descriptions').append(`<p>${$(el).text().trim()}</p>`);
+        })
+        
+        $('.year_modal').addClass('active');
+        $('body').css({
+            overflow: 'hidden'
+        });
+    })
+});
+
+$('.year_modal__close').click(function () {
+    $('.year_modal').removeClass('active');
+    $('body').css({
+        overflow: 'visible'
+    });
 })
